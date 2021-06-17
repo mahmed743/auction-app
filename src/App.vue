@@ -23,10 +23,19 @@ export default {
 </script>
 <style>
 html {
+
 background-image:url(https://images.unsplash.com/photo-1546412414-8035e1776c9a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+html, body {
+  font-family: 'Cairo', sans-serif;
+}
+
+#app {
+  font-family: 'Cairo', sans-serif;
 }
 .v-card__title {
     align-items: center;
@@ -39,6 +48,15 @@ background-image:url(https://images.unsplash.com/photo-1546412414-8035e1776c9a?i
     word-break: break-all;
     background-color: #ff7642;
     /* height: 46px; */
+}
+.v-application a {
+    color: #0a0a0a;
+}
+.container {
+    width: 100%;
+    padding: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
 }
 .v-card__actions {
     align-items: center;

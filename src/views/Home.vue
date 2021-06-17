@@ -1,36 +1,10 @@
 <template>
 <div>
-    <v-main>
       <v-container>
       <br>
         <v-row>
           <v-col cols="12">
-          <v-card flat style="background-color: #ffffff87;     border-radius: 10px;
-    border: 1px solid #f5f5f5;" height="200">
-            <v-row class="mx-auto">
-                <v-col class="mt-2" cols="3"><div>
-                 <v-avatar tile  class="profile"
-            size="164">
-                 <v-img  style="background-color: #fff;
-    border-radius: 15px;"   height="100%" :src="img"></v-img>
-    </v-avatar>
-                </div>
-                </v-col>
-                <v-col class="mt-2">
-                 <v-btn dark  color="#ff7642" elevation="0" rounded class="mx-2">About Us</v-btn>
-                <v-btn dark color="#ff7642" elevation="0" rounded class="mx-2">Contect Us</v-btn>
-                <v-row>
-                <v-col cols="12"></v-col>
-                <v-col class="mt-10"></v-col>
-                </v-row>
-                </v-col>
-                <v-col class="mt-2">
-                <a class="mx-2" @click="showLogin">login</a>
-                 <a class="mx-2">Sing Up</a>
-                <a class="mx-2">Arabic</a>
-                </v-col>
-              </v-row>
-            </v-card>
+          <Main/>
           </v-col>
            <v-col cols="12">
             <v-card flat style="background-color: #ffffff87;     border-radius: 10px;
@@ -40,7 +14,7 @@
            <v-card
     class="mx-auto rounded-xl"
   >
-  <v-card-title class="justify-center text-h6" style="color:#ffff">WATCHES</v-card-title>
+  <v-card-title class="justify-center text-h6" style="color:#ffff">{{$t('WATCHES') }}</v-card-title>
     <v-img
       class="white--text align-end"
       height="200px"
@@ -52,7 +26,7 @@
         color="#ffff"
         text
       >
-        Show more
+       {{ $t('Show_more') }}
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -61,7 +35,7 @@
               <v-card
     class="mx-auto rounded-xl"
   >
-  <v-card-title class="justify-center text-h6" style="color:#ffff">PLATES</v-card-title>
+  <v-card-title class="justify-center text-h6" style="color:#ffff">{{ $t('PLATES') }}</v-card-title>
     <v-img
       class="white--text align-end"
       height="200px"
@@ -73,7 +47,7 @@
         color="#ffff"
         text
       >
-        Show more
+        {{ $t('Show_more')}}
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -82,7 +56,7 @@
              <v-card
     class="mx-auto rounded-xl"
   >
-  <v-card-title class="justify-center text-h6" style="color:#ffff">YACHTS</v-card-title>
+  <v-card-title class="justify-center text-h6" style="color:#ffff">{{ $t('YACHTS') }}</v-card-title>
     <v-img
       class="white--text align-end"
       height="200px"
@@ -94,7 +68,7 @@
         color="#ffff"
         text
       >
-        Show more
+        {{ $t('Show_more') }}
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -103,7 +77,7 @@
               <v-card
     class="mx-auto rounded-xl"
   >
-  <v-card-title class="justify-center  text-h6" style="color:#ffff">CARS</v-card-title>
+  <v-card-title class="justify-center  text-h6" style="color:#ffff">{{ $t('CARS') }}</v-card-title>
     <v-img
       class="white--text align-end"
       height="200px"
@@ -115,7 +89,7 @@
         color="#ffff"
         text
       >
-        Show more
+       {{ $t('Show_more')}}
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -124,122 +98,62 @@
             </v-card>
           </v-col>
            <v-col cols="12">
-      <v-card style="   color: #fff; background-color: #374151ba; border-radius: 10px;
-    border: 1px solid #f5f5f5;">
-    <v-row>
-    <v-col class="mx-3 mt-3">
-      <v-avatar tile  class="profile"
-            size="164">
-                 <v-img  style="background-color: #fff;
-    border-radius: 15px;"   height="100%" :src="img"></v-img>
-    </v-avatar>
-<div>Deal Auction is a leading UAE - based auction company in the Middle East</div>
-    </v-col>
-    <v-col cols="4">
-    <v-list dark color="#ffffff00" flat>
-    <v-subheader>CREATE AUCTION</v-subheader>
-    <v-list-item color="#ffff">
-      <v-list-item-icon>
-             <v-icon>mdi-arrow-right</v-icon>
-          </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>Add Car</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-     <v-list-item color="#ffff">
-      <v-list-item-icon>
-            <v-icon>mdi-arrow-right</v-icon>
-          </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>Add Watch</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-     <v-list-item color="#ffff">
-      <v-list-item-icon>
-             <v-icon>mdi-arrow-right</v-icon>
-          </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>Add Plate</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-     <v-list-item color="#ffff">
-      <v-list-item-icon>
-             <v-icon>mdi-arrow-right</v-icon>
-          </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>Add Yachts</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-    </v-list>
-    </v-col>
-    <v-col cols="4">
-      <v-list dark color="#ffffff00" flat>
-    <v-subheader>DEAL AUCTION</v-subheader>
-    <v-list-item color="#ffff">
-      <v-list-item-icon>
-             <v-icon>mdi-arrow-right</v-icon>
-          </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>About us</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-     <v-list-item color="#ffff">
-      <v-list-item-icon>
-            <v-icon>mdi-arrow-right</v-icon>
-          </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>Contact us</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-     <v-list-item color="#ffff">
-      <v-list-item-icon>
-             <v-icon>mdi-arrow-right</v-icon>
-          </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>Sign up</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-    </v-list>
-    </v-col>
-    </v-row>
-    </v-card>
+           <Footer/>
            </v-col>
         </v-row>
       </v-container>
-    </v-main>
     <login v-if="login.show" @closeLogin="login.show = false"/>
 </div>
 </template>
 
 <script>
 import Login from '../components/login.vue';
-
+import moment from 'moment'
+import Footer from '../components/layout/Footer.vue';
+import Main from '@/components/layout/Main.vue';
 export default {
   name: 'Home',
   components: {
     Login,
+    Footer,
+    Main,
   },
   data() {
     return {
       /* eslint-disable global-require */
       img: require('../assets/deal.png'),
+      time: '',
       login: {
         show: false,
       },
     };
   },
+  computed: {
+    
+     currentDateTime() {
+      return moment().format('MMMM Do YYYY, h:mm:ss a')
+    }
+  },
   methods: {
     showLogin() {
       this.login.show = true;
     },
+    changeRTL () {
+        this.$vuetify.rtl = !this.$vuetify.rtl;
+        
+        this.$vuetify.rtl ? this.$i18n.locale = "ar" : this.$i18n.locale = "en";
+      },
   },
+  created() {
+    this.interval=setInterval(() => {
+      this.time = moment().format('MMMM Do YYYY, h:mm:ss a');
+    }, 1)
+  }
 };
 </script>
 
 <style scoped>
-.v-application a {
-    color: #0a0a0a;
-}
+
 
 .v-card__title {
     align-items: center;
